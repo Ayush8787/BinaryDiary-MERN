@@ -31,7 +31,7 @@ password2 : ""
   }
 
   if (isAuthenticated) {
-    return <Redirect to="/dashboard" />;
+    return <Redirect to="/login" />;
   }
 
 
@@ -44,10 +44,10 @@ password2 : ""
       <p className="lead"><i className="fas fa-user"></i> Create Your Account</p>
       <form className="form" onSubmit={e => onSubmit(e)}>
         <div className="form-group">
-          <input type="text"  className="rr" placeholder="Name" name="name" value={name} onChange={e => onchange(e)}  />
+          <input type="text"  className="rr" placeholder="Name" name="name" value={name} onChange={e => onchange(e)} required />
         </div>
         <div className="form-group">
-          <input type="email"  className="rr" placeholder="Email Address" value={email} onChange={e => onchange(e)} name="email" />
+          <input type="email"  className="rr" placeholder="Email Address" value={email} onChange={e => onchange(e)} name="email" required />
           <small className="form-text"
             >This site uses Gravatar so if you want a profile image, use a
             Gravatar email</small>
@@ -60,6 +60,8 @@ password2 : ""
             name="password"
             value={password}
             onChange={e => onchange(e)}
+            required
+            minLength="6"
             
           />
         </div>
@@ -71,6 +73,8 @@ password2 : ""
             placeholder="Confirm Password"
             name="password2"
             onChange={e => onchange(e)}
+            required
+            minLength="6"
             
           />
         </div>

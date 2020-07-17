@@ -11,7 +11,9 @@ import Alert from "./components/layout/alert"
 import { loadUser } from './actions/auth';
 import setAuthToken from './utills/setAuthToken';
 import PrivateRoute from "./components/routing/PrivateRoute";
-import { Dashboard } from './components/dashboard/Dashboard';
+import  Dashboard  from './components/dashboard/Dashboard';
+import  CreateProfile  from './components/profile-forms/CreateProfile';
+import  EditProfile  from './components/profile-forms/EditProfile';
 
 
 
@@ -29,11 +31,13 @@ const App = () => {
 <Fragment>
   <Navbar />
     <Route exact path="/" component={Landing} />
-    <section>
+    <section className="container">
       <Alert/>
     <Route exact path="/register" component={Register} />
     <Route exact path="/login" component={Login} />
     <PrivateRoute exact path="/dashboard" component={Dashboard} />
+    <PrivateRoute exact path="/create-profile" component={CreateProfile} />
+    <PrivateRoute exact path="/edit-profile" component={EditProfile} />
     </section>
 </Fragment>
 </Router>
