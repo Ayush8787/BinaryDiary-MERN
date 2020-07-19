@@ -331,6 +331,19 @@ opacity: 0;
   margin-top: 200px;
 }
 
+.deletemargin{
+  margin-left: 0px;
+  width: 90px;
+  border-radius: 6px;
+}
+
+.deletemargin1{
+  margin-left: 0px;
+  width: 220px;
+  border-radius: 6px;
+}
+
+
 .btn-success,
 .bg-success,
 .badge-success,
