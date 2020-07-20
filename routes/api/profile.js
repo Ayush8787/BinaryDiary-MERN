@@ -148,7 +148,7 @@ router.get("/user/:user_id",async (req,res)=>{
 		
 
 	if(!profile){
-		return res.status(400).json({msg : "No user Found!!"})
+		return res.status(400).json({msg : "No user Found!"})
 	}
  
 	return res.json(profile)
