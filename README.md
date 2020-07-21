@@ -1,6 +1,6 @@
 ﻿# Binary Diary
- -ReactJS
- -MongoDB
- -NodeJS
- -ExpressJS
+  ReactJS 
+ | MongoDB
+ | NodeJS
+ | ExpressJS
 
